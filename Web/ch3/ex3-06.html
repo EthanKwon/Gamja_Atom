@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>텍스트 입력 폼</title>
+    <style>
+      #right {text-align : right;}
+      #center {text-align : center;}
+    </style>
+  </head>
+   <body>
+    <h3>자기 소개서 작성</h3>
+    <hr>
+    <form>
+      이름 : <input type="text" value=""><br>
+      암호 : <input type="password" value="" maxlength="4"><br>
+      자소서 : <textarea rows="5" clos="20">이곳에 자기소개서 작성</textarea>
+    </form>
+    <hr>
+    <h3>Table로 자기소개서 작성</h3>
+    <form>
+      <table>
+        <tbody>
+          <tr><td id="right">이름 : </td><td><input type="text" value=""></td></tr>
+          <tr><td id="right">암호 : </td><td><input type="password" value="" maxlength="4"></td></tr>
+          <tr><td id="right">자소서 : </td><td><textarea rows="5" clos="20">이곳에 자기소개서 작성</textarea></td></tr>
+          <tr><td id="center" colspan="2"><input type="submit" value=" &nbsp;제출&nbsp; "></td></tr>
+        </tbody>
+      </table>
+    </form>
+   </body>
+</html>
