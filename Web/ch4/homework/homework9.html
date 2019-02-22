@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>text-shadow와 box-shadow이용</title>
+  <style>
+  h1 {
+    color: yellow;
+    text-align: center;
+    text-shadow: 2px 2px 2px black,
+                 0 0 25px blue, 0 0 5px darkblue;
+  }
+  img{
+    width: 200px;
+    height: 170px;
+  }
+  img:hover {
+    box-shadow: 2px 2px 2px black,
+                 0 0 25px blue, 0 0 5px darkblue;
+  }
+  </style>
+</head>
+<body>
+  <h1>Most Visited Pages</h1>
+  <hr>
+  <table>
+    <tbody>
+      <tr>
+        <td><img src="media/naver.png" alt="www.naver.com"></td>
+        <td><img src="media/chosun.png" alt="www.chosun.com"></td>
+        <td><img src="media/amazon.png" alt="www.amazon.com"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

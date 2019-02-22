@@ -2,6 +2,30 @@
 <html>
 <head>
   <title>소프트웨어 기술에 대한 설문지</title>
+  <style>
+  h1 {
+    color: brown;
+    text-align: center;
+  }
+  body {
+    background-color: aliceblue;
+  }
+  p {
+    font-family: "휴먼편지체";
+    font-size: 1em;
+    text-indent: 1em;
+  }
+  h4 {
+    color: blue;
+  }
+  section {
+    background-color: mistyrose;
+  }
+  footer {
+    background: orange;
+    border-radius: 20px;
+  }
+  </style>
 </head>
 <body>
   <header><h1>설문지</h1></header>
@@ -14,7 +38,8 @@
   <section>
     <article>
       <form>
-        학년 <input type="radio" name="grade" value="1">1학년
+        <h4>학년</h4>
+             <input type="radio" name="grade" value="1">1학년
              <input type="radio" name="grade" value="2">2학년
              <input type="radio" name="grade" value="3">3학년
              <input type="radio" name="grade" value="4">4학년<br><br>
@@ -22,29 +47,32 @@
     </article>
     <article>
       <form>
-        성별 <input type="radio" name="gender" value="1">남
-             <input type="radio" name="gender" value="2">여<br><br>
+        <h4>성별</h4>
+        <input type="radio" name="gender" value="1">남
+        <input type="radio" name="gender" value="2">여<br><br>
       </form>
     </article>
     <article>
       <form>
-        관심분야 <select name="field" langth="50">
-                 <option name="field" value="1" selected>모바일 소프트웨어</option>
-                 <option name="field" value="2">응용 소프트웨어</option>
-                 </select><br><br>
+        <h4>관심 분야</h4>
+        <select name="field" langth="50">
+        <option name="field" value="1" selected>모바일 소프트웨어</option>
+        <option name="field" value="2">응용 소프트웨어</option>
+        </select><br><br>
       </form>
     </article>
     <article>
       <form>
-        진로 <input type="checkbox" name="course" value="1">개발
-             <input type="checkbox" name="course" value="2">기획
-             <input type="checkbox" name="course" value="3">영업
-             <input type="checkbox" name="course" value="4">창업<br><br>
+         <h4>진로(다중 선택)</h4>
+         <input type="checkbox" name="course" value="1">개발
+         <input type="checkbox" name="course" value="2">기획
+         <input type="checkbox" name="course" value="3">영업
+         <input type="checkbox" name="course" value="4">창업<br><br>
       </form>
     </article>
     <article>
       <form>
-        남기고 싶은 말 <br>
+        <h4>남기고 싶은 말</h4>
         <textarea rows="5" cols="40" placeholder="글을 남겨주세요"></textarea>
       </form>
     </article>
