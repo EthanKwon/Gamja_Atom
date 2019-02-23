@@ -1,0 +1,28 @@
+h1 {
+  color: brown;
+  text-align: center;
+}
+body {
+  background-color: aliceblue;
+}
+p,pre,form {
+  font-family: "휴먼편지체";
+  font-size: 1em;
+  text-indent: 1em;
+}
+
+span{
+  font-family: "";
+  color: blue;
+  font-weight: 700;
+}
+h4 {
+  color: blue;
+}
+section {
+  background-color: mistyrose;
+}
+footer {
+  background: orange;
+  border-radius: 20px;
+}

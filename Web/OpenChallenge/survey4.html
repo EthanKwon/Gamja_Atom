@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>소프트웨어 기술에 대한 설문지</title>
+  <link rel="stylesheet" href="survey4.css" type="text/css">
 </head>
 <body>
   <header><h1>설문지</h1></header>
@@ -14,7 +15,7 @@
   <section>
     <article>
       <form>
-        학년
+        <span>학년</span>
              <input type="radio" name="grade" value="1">1학년
              <input type="radio" name="grade" value="2">2학년
              <input type="radio" name="grade" value="3">3학년
@@ -23,14 +24,14 @@
     </article>
     <article>
       <form>
-        성별
+        <span>성별</span>
             <input type="radio" name="gender" value="1">남
             <input type="radio" name="gender" value="2">여<br><br>
       </form>
     </article>
     <article>
       <form>
-        관심 분야
+        <span>관심 분야</span>
             <select name="field" langth="50">
             <option name="field" value="1" selected>모바일 소프트웨어</option>
             <option name="field" value="2">응용 소프트웨어</option>
@@ -39,7 +40,7 @@
     </article>
     <article>
       <form>
-         진로(다중 선택)
+         <span>진로(다중 선택)</span>
              <input type="checkbox" name="course" value="1">개발
              <input type="checkbox" name="course" value="2">기획
              <input type="checkbox" name="course" value="3">영업
@@ -48,13 +49,13 @@
     </article>
     <article>
       <form>
-        남기고 싶은 말
-            <textarea rows="5" cols="40" placeholder="글을 남겨주세요"></textarea>
+        <span>남기고 싶은 말</span>
+            <textarea rows="10" cols="40" placeholder="글을 남겨주세요"></textarea>
       </form>
     </article>
   </section>
   <footer>
-    <pre><b>Copyright 2019 by Oin Kwon</b></pre>
+    <pre>Copyright 2019 by Oin Kwon</pre>
   </footer>
 </body>
 </html>
