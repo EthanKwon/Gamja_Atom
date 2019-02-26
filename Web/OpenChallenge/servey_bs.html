@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>설문 조사</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/survey_bs.css" type="text/css">
+</head>
+
+<body>
+  <div id="스마트" class="jumbotron">
+    <div class="container">
+      <header>
+        <audio src="media/Rylynn.mp3" autoplay loop></audio>
+        <h1>설문지</h1>
+        <p id="내용">
+          소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.
+        </p>
+      </header>
+    </div>
+  </div> <!-- 설문지 -->
+
+  <div class="jumbotron">
+    <div class="container">
+      <form>
+        <div  class="form-group">
+          <label id="목록">학년&nbsp; &nbsp;</label>
+               <input type="radio" name="grade" value="1">1학년 &nbsp;
+               <input type="radio" name="grade" value="2">2학년 &nbsp;
+               <input type="radio" name="grade" value="3">3학년 &nbsp;
+               <input type="radio" name="grade" value="4">4학년<br><br>
+        </div>
+        <div class="form-group">
+          <label id="목록" for="exampleInputEmail1">성별&nbsp; &nbsp;</label>
+              <input type="radio" name="gender" value="1">남 &nbsp;
+              <input type="radio" name="gender" value="2">여<br><br>
+        </div>
+        <div class="form-group">
+          <label id="목록" for="exampleInputEmail1">관심 분야&nbsp; &nbsp;</label>
+              <select name="field" langth="50">
+              <option name="field" value="1" selected>모바일 소프트웨어</option>
+              <option name="field" value="2">응용 소프트웨어</option>
+          </select><br><br>
+        </div>
+        <div>
+          <label id="목록" >진로&nbsp; &nbsp;</label>
+                <input type="checkbox" name="course" value="1">개발 &nbsp;
+                <input type="checkbox" name="course" value="2">기획 &nbsp;
+                <input type="checkbox" name="course" value="3">영업 &nbsp;
+                <input type="checkbox" name="course" value="4">창업<br><br>
+        </div>
+        <span id="목록" >남기고 싶은 말</span>
+            <textarea rows="10" cols="50" placeholder="글을 남겨주세요"></textarea>
+      </form>
+    </div>
+  </div> <!-- 설문조사지 -->
+
+  <nav id="bottom_nav" class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">설문조사</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li id="copyright">Copyright 2019 by Oin Kwon</li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav> <!-- 하단 네이게이션바 -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

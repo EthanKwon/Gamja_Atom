@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 30px;
+  margin-top: 0px;
+}
+
+#copyright {
+  padding: 5px;
+  margin-top: 10px;
+  margin: 5px;
+}
+
+#bs-example-navbar-collapse-1 {
+  background-color: white;
+}
+
+#스마트 {
+  background-image: url('../media/스마트폰.png') ;
+  background-size: 100% 100%;
+  color: white;
+}
+
+#목록 {
+  font-weight: bold;
+  font-size: 15px;
+}

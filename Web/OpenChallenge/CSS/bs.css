@@ -1,0 +1,43 @@
+body{
+  padding-top: 70px;
+}
+
+h1 {
+  text-align: center;
+  padding: 40px;
+  margin: 40px;
+  font-weight: bold;
+}
+h3 {
+  padding: 10px;
+  margin: 10px;
+  margin-left: 0px;
+  padding-left: 0px;
+  font-weight: bold;
+}
+
+#내용{
+  text-indent: 1.5em;
+  line-height: 1.5em;
+}
+
+#sample_i, #sample_s {
+  text-align: center;
+}
+#copyright {
+  padding: 5px;
+  padding-top: 10px;
+  margin: 5px;
+}
+#설문조사 {
+  font-weight: bold;
+}
+#bs-example-navbar-collapse-1 {
+  background-color: white;
+}
+
+#스마트 {
+  background-image: url('../media/스마트폰.png') ;
+  background-size: 100% 100%;
+  color: white;
+}
