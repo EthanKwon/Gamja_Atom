@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>document.write()로 표 그리기</title>
+  <style>
+    table,td {
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    document.write("<h3>document.write()로 표만들기</h3>");
+    document.write("<hr>");
+    document.write("<table>")
+    document.write("<tr>");
+      document.write("<td>n</td>");
+      for(var f = 0; f<10 ; f++){
+        document.write("<td>" + f + "</td>");
+      }
+    document.write("</tr>");
+    document.write("<tr>");
+      document.write("<td>n<sup>2</sup></td>");
+      for(var f = 0; f<10 ; f++){
+        document.write("<td>" + f*f + "</td>");
+      }
+    document.write("</tr>");
+    document.write("</table>")
+
+  </script>
+
+</body>
+</html>

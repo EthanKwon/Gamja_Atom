@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>월화수목금토일</title>
+</head>
+<body>
+  <h3>월화수목금토일</h3>
+  <hr>
+  <script>
+    var work;
+    var week = prompt("월화수목금토일 중에서 입력하세요","");
+
+    switch(week) {
+      case "월" :
+      case "화" :
+      case "수" :
+      case "목" :
+      case "금" : work = "출근"; break;
+      case "토" :
+      case "일" : work = "휴일"; break;
+      default : alert("요일을 다시 입력하세요.");
+    }
+    document.write(week + "는 "+ work);
+  </script>
+
+</body>
+</html>
