@@ -21,7 +21,7 @@ h3 {
   line-height: 1.5em;
 }
 
-#sample_i, #sample_s {
+#sample_i, #sample_s, #sample_l {
   text-align: center;
 }
 #copyright {
@@ -32,7 +32,7 @@ h3 {
 #설문조사 {
   font-weight: bold;
 }
-#bs-example-navbar-collapse-1 {
+#bottom_nav {
   background-color: white;
 }
 

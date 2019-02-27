@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>표 그리기</title>
+  <style>
+  table {
+    border: 2px solid blue;
+    border-collapse: collapse;
+  }
+  th,td {
+    width: 100px;
+    border: 1px dotted green;
+  }
+
+  td{
+
+    text-align: right;
+
+  }
+
+  tr {
+    border: 1px dotted green;
+  }
+
+
+  thead>tr {
+    height: 30px;
+  }
+
+
+  </style>
+</head>
+<body>
+  <table>
+    <thead >
+      <tr id:"head">
+        <th>이름</th><th>HTML5</th><th>CSS3</th><th>소계</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr><th>합계</th><th>150</th><th>170</th><th>320</th></tr>
+    </tfoot>
+    <tbody>
+      <tr><td>홍길동</td><td>80</td><td>80</td><td>160</td></tr>
+      <tr><td>성춘향</td><td>70</td><td>90</td><td>160</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

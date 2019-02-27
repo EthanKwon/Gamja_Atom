@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>회원가입</title>
+  <style>
+    .목록 {
+      text-align: right;
+    }
+    tr {
+      height: 40px;
+    }
+    table {
+      border: 2px solid ;
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr><th><h3>회원 가입</h3></th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class ="목록">로그인 ID : &nbsp;&nbsp;</td>
+        <td>
+          <form>
+            <input type="text">
+          </form>
+        </td>
+      </tr> <!-- 로그인 ID -->
+      <tr>
+        <td class ="목록">패스워드 : &nbsp;&nbsp;</td>
+        <td>
+          <form>
+            <input type="password">
+          </form>
+        </td>
+      </tr> <!-- 패스워드 -->
+      <tr>
+        <td class ="목록">패스워드 확인 : &nbsp;&nbsp;</td>
+        <td>
+          <form>
+            <input type="password">
+          </form>
+        </td>
+      </tr> <!-- 패스워드 확인 -->
+      <tr>
+        <td class ="목록">이메일 : &nbsp;&nbsp;</td>
+        <td>
+          <form>
+            <input type="email">
+          </form>
+        </td>
+      </tr> <!-- 이메일 -->
+      <tr>
+        <td class ="목록"> 전화번호 : &nbsp;&nbsp;</td>
+        <td>
+          <form>
+            <input type="tel">
+          </form>
+        </td>
+      </tr> <!-- 전화번호 -->
+      <tr>
+        <td class ="목록">성별 : &nbsp;&nbsp;</td>
+        <td>
+          <form>
+              <input type="radio" name="gender" value="1"> 남
+              <input type="radio" name="gender" value="2"> 여
+          </form>
+        </td>
+      </tr> <!-- 성별  -->
+      <tr>
+        <td class ="목록">생년월일 : &nbsp;&nbsp;</td>
+        <td>
+          <form>
+            <input type="date">
+          </form>
+        </td>
+      </tr> <!-- 생년월일 -->
+      <tr>
+        <td class ="목록">좋아하는 음식 : &nbsp;&nbsp;</td>
+        <td>
+          <input type="checkbox" value="1"> 한식
+          <input type="checkbox" value="2"> 중식
+          <input type="checkbox" value="3"> 양식
+          <input type="checkbox" value="4"> 일식
+        </td>
+      </tr> <!-- 좋아하는 음식 -->
+      <tr>
+        <td class ="목록">사는 곳 : &nbsp;&nbsp;</td>
+        <td id="사는곳">
+          <select>
+            <option value="1" selected>대전광역식 유성구</option>
+            <option value="2" >대전광역식 동구</option>
+            <option value="3" >대전광역식 서구</option>
+            <option value="4" >대전광역식 중구</option>
+            <option value="5" >대전광역식 대덕구</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
