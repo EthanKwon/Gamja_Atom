@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>함수</title>
+  <script>
+    function adder(a, b) {
+      return a+b;
+    }
+    function mAdder(init, final, inc){
+      var total = 0;
+      for (var i = init; i <=final; i +=inc){
+        total +=i;
+      }
+      return total;
+    }
+  </script>
+
+</head>
+<body>
+  <h3>함수 adder()</h3>
+  <hr>
+  <script>
+    var b = parseInt(prompt("b의 값 : ","1000"));
+    var sum = 0;
+
+    for(var i=1; i <=5 ; i++){
+      sum = mAdder(0,b,i);
+      document.write("0부터 "+i +"배수의 합은 "+ sum);
+      document.write("<br>");
+    }
+
+  </script>
+
+</body>
+</html>

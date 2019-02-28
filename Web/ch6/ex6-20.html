@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>break문</title>
+</head>
+<body>
+  <script>
+    document.write("<h3>1에서 얼마까지 더해야 입력값을 넘는가?</h3>");
+    document.write("<hr>")
+
+    var i=0;sum=0;
+    var a = parseInt(prompt("입력값 : ","1000"));
+
+    while(true){
+      sum += i;
+      if(sum > a)
+          break;
+      i++;
+    }
+    document.write(i+"까지 더하면"+ a +"을 넘음 : "+ sum);
+  </script>
+</body>
+</html>

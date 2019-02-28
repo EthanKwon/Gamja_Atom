@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>while 문</title>
+</head>
+<body>
+  <script>
+    document.write("<h3>while문으로 0에서 n까지 합</h3>");
+    document.write("<hr>");
+
+    var i =0; sum1 = 0; sum2 = 0;
+    var a = prompt("0보다 작은 정수를 입력하세요","-25");
+    a = parseInt(a);
+
+    do{
+      sum1 += i;
+      i--;
+    }while(i>=a)
+    document.write("0에서 "+ a + "까지의 합은 " + sum1);
+  </script>
+
+</body>
+</html>

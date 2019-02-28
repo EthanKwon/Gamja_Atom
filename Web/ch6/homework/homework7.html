@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>큰 자리수와 낮은자리수 같은지 비교</title>
+  <script>
+    function compareHighLow() {
+
+      while(true){
+        var a = parseInt(prompt("숫자 입력","5675"));
+        if (isNaN(a)){
+          alert("다시 숫자를 입력해 주세요.");
+          continue;
+        }
+        break;
+      }
+      var bigNum = 0; smlNum = 0; c = 1;
+      var i = 1
+
+      while(c != 0){
+        c = Math.floor(a/(10*i));
+        i = 10*i;
+      }
+
+      bigNum = Math.floor(a/(i/10));
+      smlNum = a - Math.floor(a/10)*10;
+
+      if(bigNum == smlNum)
+        document.write(a + " 같음");
+      else
+        document.write(a + " 다름");
+    }
+  </script>
+
+</head>
+<body>
+  <h3>큰 자리수와 낮은 자리수 같은지 비교</h3>
+  <hr>
+  <script>
+    compareHighLow();
+  </script>
+</body>
+</html>
