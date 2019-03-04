@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>난수 생성하기</title>
+</head>
+<body>
+  <h3>난수 10개 생성</h3>
+  <hr>
+  <script>
+    var n=[];
+    var plots=[];
+    for(var i =0;i<10;i++){
+      n[i] = (Math.random()*100)+1;
+      plots[i] = Math.floor(n[i]);
+    }
+
+    for(i=0;i<10;i++){
+      document.write(plots[i] + " ");
+    }
+    document.write("<hr>");
+    var big = n[0];
+    for(i=0;i<10;i++){
+      if(big < plots[i])
+        big = plots[i];
+    }
+    document.write("제일 큰 수는 " + big);
+    document.write("<hr>");
+    plots.sort(function(a,b){return a-b});
+    for(i=0;i<10;i++)
+      document.write(plots[i] + " ");
+  </script>
+
+</body>
+</html>

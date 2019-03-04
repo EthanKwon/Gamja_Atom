@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>이름 문자열 출력</title>
+</head>
+<body>
+  <h3>문자열 배열 다루기</h3>
+  <hr>
+  <script>
+    var names = new Array("wonsun","jaemoonlee","kitae", "gracehwang");
+
+    document.write("이름 : ")
+
+    for(var i = 0; i < names.length;i++)
+      document.write(names[i] + " ");
+
+    var big = names[0].length;
+    var bigNum = 0;
+    for(i=0; i<names.length;i++){
+      if(big < names[i].length){
+        big = names[i].length;
+        bigNum = i;
+      }
+    }
+    document.write("<br>가장 긴 이름은 : " + names[bigNum]);
+
+    names.sort();
+
+    document.write("<br>가장 먼저 나오는 이름은 : " + names[0]);
+
+    document.write("<br> 증가순 이름 : ");
+    for(i=0;i<names.length;i++)
+      document.write(names[i] + " ");
+
+  </script>
+
+</body>
+</html>

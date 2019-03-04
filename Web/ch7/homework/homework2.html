@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>정수 5개를 입력 받아 정렬 하기</title>
+</head>
+<body>
+  <h3>정수 5개 입력 받아 역순으로 출력</h3>
+  <hr>
+  <script>
+    var num = new Array(5);
+
+    for(var i = 0; i <5;i++)
+      num[i] = prompt("정수 입력");
+
+    document.write("입력된 수의 배열<br>");
+
+    for(i = 0; i <5;i++)
+      document.write(num[i] + " ");
+
+    document.write("<hr>");
+
+    document.write("역순으로 재정렬된 배열<br>");
+
+    num.reverse();
+
+    for(i = 0; i <5;i++)
+      document.write(num[i] + " ");
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>방문 시간에 따른 웹페이지의 색상</title>
+</head>
+<body>
+  <h3>오전이면 lightskyblue, 오후이면 orange 배경</h3>
+  <hr>
+  <script>
+    var current = new Date();
+    var morning = new Date(2019,2,4,9,0,0);
+    var afternoon = new Date(2019,2,4,14,0,0)
+
+    if(current.getHours() < 12)
+        document.body.style.backgroundColor = "lightskyblue";
+    else
+        document.body.style.backgroundColor = "Orange";
+
+    document.write("현재시간은 ");
+    document.write(current.toLocaleString());
+  </script>
+
+</body>
+</html>

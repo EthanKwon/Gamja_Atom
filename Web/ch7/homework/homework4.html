@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>방문 요일에 따른 웹페이지 색상 변경</title>
+</head>
+<body>
+  <h3>일요일은 pink, 다른요일은 gold 배경</h3>
+  <hr>
+  <script>
+    var current = new Date();
+
+    if (current.getDay() == 0)
+      document.body.style.backgroundColor = "pink";
+    else
+      document.body.style.backgroundColor = "gold";
+
+    document.write("오늘 : ")
+    document.write(current.getDate() + "일, ");
+    switch(current.getDay()){
+      case 0: document.write("일요일");
+              break;
+      case 1: document.write("월요일");
+              break;
+      case 2: document.write("화요일");
+              break;
+      case 3: document.write("수요일");
+              break;
+      case 4: document.write("목요일");
+              break;
+      case 5: document.write("금요일");
+              break;
+      case 6: document.write("토요일");
+              break;
+    }
+  </script>
+</body>
+</html>
