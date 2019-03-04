@@ -38,34 +38,28 @@
 
     document.write("<br>2. 같은 성씨의 개수 <hr>");
 
-    var LastName = new Array(namesOnly.length);
-    var LastCount = new Array(namesOnly.length);
-    var c = 0, order = 0 ;
-//카운트 초기화
-    for(i = 0; i<LastCount.length;i++){
-      LastCount[i] = 0;
-    }
+    var lastNames = new Array();
+    var lastCount = new Array();
+
+    lastNames[0] = namesOnly[0].charAt(0);
+    lastCount[0] = 1;
 
     for(i = 0; i <namesOnly.length ; i++){
-      for(k = 0; k <LastName.length ; k ++){
-        if(namesOnly[i].charAt(0) == LastName[k].charAt(0))
-          c = 1;
-      }
-      if (c == 1){
-        for(k = 0; k <LastName.length ; k ++){
-          if(namesOnly[i].charAt(0) == LastName[k].charAt(0))
-            LastCount[k] ++;
-        }
-      }
-      else {
-        LastName[order] = namesOnly[i];
-        LastCount[order] ++;
-        order ++;
-      }
+          var duplicated = false;
+          for(k = 0; k <lastNames.length ; k ++){
+                if(namesOnly[i].charAt(0) == lastNames[k]){
+                  lastCount[k] ++;
+                  duplicated = true;
+                  break;
+                }
+          }
+          if(!duplicated){
+                  lastNames[k] = namesOnly[i].charAt(0);
+                  lastCount[k] = 1;
+          }
     }
-
-    for(i = 0; i<LastName.length;i++){
-      document.write(LastName[i] + " : " + LastCount[i] + "<br>");
+    for(i = 0; i<lastNames.length;i++){
+      document.write(lastNames[i] + " : " + lastCount[i] + "<br>");
     }
   </script>
 </body>
