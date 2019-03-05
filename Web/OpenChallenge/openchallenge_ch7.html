@@ -38,6 +38,7 @@
 
     document.write("<br>2. 같은 성씨의 개수 <hr>");
 
+<<<<<<< HEAD
     var lastName = new Array();
     var lastCount = new Array();
     var order = 0 ;
@@ -63,6 +64,29 @@
 
     for(i = 0; i<lastName.length;i++){
       document.write(lastName[i] + " : " + lastCount[i] + "<br>");
+=======
+    var lastNames = new Array();
+    var lastCount = new Array();
+
+    lastNames[0] = namesOnly[0].charAt(0);
+    lastCount[0] = 1;
+
+    for(i = 0; i <namesOnly.length ; i++){
+          var duplicated = false;
+          for(k = 0; k <lastNames.length ; k ++){
+                if(namesOnly[i].charAt(0) == lastNames[k]){
+                  lastCount[k] ++;
+                  duplicated = true;
+                  break;
+                }
+          }
+          if(!duplicated){
+                  lastNames[k] = namesOnly[i].charAt(0);
+                  lastCount[k] = 1;
+          }
+    }
+    for(i = 0; i<lastNames.length;i++){
+      document.write(lastNames[i] + " : " + lastCount[i] + "<br>");
     }
   </script>
 </body>
