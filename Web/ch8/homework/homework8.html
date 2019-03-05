@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>transform:rotate()</title>
+</head>
+<body>
+  <h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+  <hr>
+  <img src="media/spongebob.png" alt="스폰지밥" id="bob" width= 20% onclick = "wide(this)">
+  <script>
+    function wide(obj) {
+      switch(obj.style.transform){
+      case "scale(2, 1)": obj.style.transform = "scale(3, 1)";
+                         break;
+      case "scale(3, 1)": obj.style.transform = "scale(4, 1)";
+                         break;
+      case "scale(4, 1)": break;
+      default : obj.style.transform = "scale(2, 1)";
+                break;
+      }
+    }
+  </script>
+</body>
+</html>

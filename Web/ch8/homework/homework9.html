@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>라면을 끓이는 순서</title>
+</head>
+<body>
+  <h3>라면을 끓이는 순서</h3>
+  <hr>
+  <ol id = olName type="A" style="background-color:yellowgreen" onclick = addLine()>
+    <li>물을 끓인다.</li>
+  </ol>
+  <script>
+    function addLine() {
+      var add = prompt("라면을 끓이는 순서를 입력하라.", "봉지에서 라면을 미리 꺼내 놓는다.");
+      var obj = document.getElementById("olName");
+      var newLine = document.createElement("li");
+
+      newLine.innerHTML = add;
+      obj.appendChild(newLine);
+
+    }
+  </script>
+</body>
+</html>

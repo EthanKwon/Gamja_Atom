@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>z-index 스타일 프로퍼티</title>
+  <style>
+  div {position: absolute;}
+  img {position: absolute;}
+  </style>
+</head>
+<body>
+  <h3>z-index 스타일 프로퍼티</h3>
+  <hr>
+  <div>
+    <img src="media/spade-A.png" width="100" height="140" alt="스페이드A" onclick = "moveCard(this)">
+    <img src="media/spade-2.png" width="100" height="140" alt="스페이드2" onclick = "moveCard(this)">
+    <img src="media/spade-3.png" width="100" height="140" alt="스페이드3" onclick = "moveCard(this)">
+    <img src="media/spade-7.png" width="100" height="140" alt="스페이드7" onclick = "moveCard(this)">
+  </div>
+  <script>
+      var z = document.getElementsByTagName("img");
+      for (var i=0;i<z.length;i++){
+        z[i].style.zIndex = i;
+        z[i].style.top = "10px";
+        z[i].style.left ="10px";
+      }
+    function moveCard(z){
+      z.style.zIndex -= 5;
+    }
+  </script>
+</body>
+</html>
