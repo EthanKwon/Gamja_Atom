@@ -9,8 +9,11 @@
   바탕 아무 곳이나 더블 클릭하면 배경색이 랜덤으로 변합니다.
   <script>
     document.ondblclick = change;
+    var randomNum = new Array();
+    for(var i =0; i<3;i++)
+      randomNum[i] = Math.floor(Math.random()*256);
     function change() {
-      document.body.style.backgroundColor = "rgb(97, 154, 23)";
+      document.body.style.backgroundColor = "rgb("+ randomNum[0] +","+randomNum[1] +","+randomNum[2] +")";
     }
   </script>
 </body>
