@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>onblur, onfocus</title>
+</head>
+<body id="body" onload="init()">
+  <h3>포커스와 onblur,onfocus</h3>
+  <hr>
+  브라우저 바깥에 마우스를 클릭하면 window 객체에 이벤트가 발생하고
+  다시 마우스를 클릭하면 window 객체에 focus 이벤트가 발생한다.
+  <script>
+  function init() {
+    window.onblur = grayField;
+    window.onfocus = whiteField;
+  }
+
+    function whiteField(){
+      body.style.backgroundColor="white";
+    }
+    function grayField(){
+      body.style.backgroundColor="lightgray";
+    }
+  </script>
+</body>
+</html>

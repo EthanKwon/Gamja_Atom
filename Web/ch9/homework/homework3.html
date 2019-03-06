@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>onkeydown</title>
+  <script>
+    function enterKey(e,obj){
+      var str = obj.value;
+      var val = document.getElementById('val');
+      if(e.keyCode == 13)
+        val.value = eval(str);
+    }
+  </script>
+
+</head>
+<body>
+  <h3>계산기 만들기</h3>
+  <hr>
+  수식을 입력하고 &lt;Enter&gt;를 입력하세요.
+  <p>
+    식<input type="text" id="func" value = "4+5" onkeydown="enterKey(event,this)"><br>
+    값<input type="text" id="val">
+  </p>
+</body>
+</html>

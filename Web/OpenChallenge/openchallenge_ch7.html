@@ -29,42 +29,16 @@
     }
 
     namesOnly.sort();
-
     document.write("<br> 정렬된 이름 : <br>");
 
     for(i = 0; i<namesOnly.length;i++){
       document.write(namesOnly[i] + "<br>");
     }
 
+//--------------------------------------------------------------------------------------------------------------
+
     document.write("<br>2. 같은 성씨의 개수 <hr>");
 
-<<<<<<< HEAD
-    var lastName = new Array();
-    var lastCount = new Array();
-    var order = 0 ;
-
-    for(i = 0; i <namesOnly.length ; i++){
-      var c = 0;
-      for(k = 0; k <lastName.length ; k ++){
-        if(namesOnly[i].charAt() == lastName[k].charAt())
-          c = 1;
-      }
-      if (c == 1){
-        for(k = 0; k <lastName.length ; k ++){
-          if(namesOnly[i].charAt() == lastName[k].charAt())
-            lastCount[k] ++;
-        }
-      }
-      else {
-        lastName[order] = namesOnly[i];
-        lastCount[order] ++;
-        order ++;
-      }
-    }
-
-    for(i = 0; i<lastName.length;i++){
-      document.write(lastName[i] + " : " + lastCount[i] + "<br>");
-=======
     var lastNames = new Array();
     var lastCount = new Array();
 

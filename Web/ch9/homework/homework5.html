@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>자바스크립트 더블클릭</title>
+</head>
+<body>
+  <h3>바탕 아무곳에나 더블 클릭</h3>
+  <hr>
+  바탕 아무 곳이나 더블 클릭하면 배경색이 랜덤으로 변합니다.
+  <script>
+    document.ondblclick = change;
+    function change() {
+      document.body.style.backgroundColor = "rgb(97, 154, 23)";
+    }
+  </script>
+</body>
+</html>
