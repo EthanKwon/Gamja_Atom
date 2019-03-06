@@ -53,6 +53,7 @@
 			else
 				lcd.value += b;
 		}
+
 		function backward() {
 			var len = lcd.value.length;
 			if(len == 0)
@@ -60,9 +61,11 @@
 			else
 				lcd.value = lcd.value.substr(0, len-1);
 		}
+
 		function calculate() {
 			lcd.value = eval(lcd.value);
 		}
+
 		function clearLcd() {
 			lcd.value = "0";
 		}
