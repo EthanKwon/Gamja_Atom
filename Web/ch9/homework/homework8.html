@@ -3,12 +3,16 @@
 <head>
   <title>이벤트 객체의 target</title>
   <script>
-    var list = document.getElementsByName("li");
-
-    list.onclick  = function(e){
-      e.target.style.fontSize = "1.3em";
-    }
-
+    var anoStr = null;
+    function changeStr(obj){
+          obj.style.fontSize = "1.3em";
+          if(anoStr != null)
+            anoStr.style.fontSize = "1em"
+          if(anoStr == obj)
+            anoStr = null;
+          else
+            anoStr = obj;
+        }
   </script>
 
 </head>
@@ -16,10 +20,10 @@
   <h3>아이템을 클릭하면 1.3배 크기로</h3>
   <hr>
   <ul>
-    <li>자전거로 대한민국 일주</li>
-    <li>책 100권 읽기</li>
-    <li>철인 3종 경기 준비</li>
-    <li>자바스크립트 정복</li>
+    <li onclick = "changeStr(this)">자전거로 대한민국 일주</li>
+    <li onclick = "changeStr(this)">책 100권 읽기</li>
+    <li onclick = "changeStr(this)">자바스크립트 정복</li>
+    <li onclick = "changeStr(this)">철인 3종 경기 준비</li>
   </ul>
 </body>
 

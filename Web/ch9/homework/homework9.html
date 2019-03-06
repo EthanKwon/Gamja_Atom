@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>이벤트 객체의 target</title>
+  <style>
+    div {
+      position: absolute;
+      width: 200px;
+      height: 70px;
+      background-color: lightskyblue;
+      visibility: hidden;
+    }
+
+  </style>
+  <script>
+    var selectList = document.getElementsByTagName("li");
+
+    function showInfo(e, obj) {
+      for(var i=0; i<selectList.length; i++){
+        if (selectList[i] == obj){
+          switch(i){
+            case 0 : visible(e,"bike")
+                     break;
+            case 1 : visible(e,"book")
+                     break;
+            case 2 : visible(e,"ironMan")
+                     break;
+            case 3 : visible(e,"java")
+                     break;
+          }
+        }
+      }
+    }
+
+    function hideInfo(obj) {
+      for(var i=0; i<selectList.length; i++){
+        if (selectList[i] == obj){
+          switch(i){
+            case 0 : hidden("bike")
+                     break;
+            case 1 : hidden("book")
+                     break;
+            case 2 : hidden("ironMan")
+                     break;
+            case 3 : hidden("java")
+                     break;
+          }
+        }
+      }
+    }
+
+    function visible(e,id) {
+      document.getElementById(id).style.visibility = "visible";
+      document.getElementById(id).style.left = e.clientX + "px";
+      document.getElementById(id).style.top = e.clientY + "px";
+    }
+
+    function hidden(id) {
+      document.getElementById(id).style.visibility = "hidden";
+    }
+
+  </script>
+
+</head>
+<body>
+  <h3>아이템을 클릭하면 1.3배 크기로</h3>
+  <hr>
+  <ul>
+    <li onmouseover = "showInfo(event,this)" onmouseout = "hideInfo(this)">자전거로 대한민국 일주</li>
+    <li onmouseover = "showInfo(event,this)" onmouseout = "hideInfo(this)">책 100권 읽기</li>
+    <li onmouseover = "showInfo(event,this)" onmouseout = "hideInfo(this)">철인 3종 경기 준비</li>
+    <li onmouseover = "showInfo(event,this)" onmouseout = "hideInfo(this)">자바스크립트 정복</li>
+  </ul>
+  <div id="bike">빨간 자전거를 타고 서울, 대전, 대구, 부산 찍고 목포, 인천을 거쳐 달린다.</div>
+  <div id="book">평소에 읽고 싶었던 책들로만 읽는다.</div>
+  <div id="ironMan">매일매일 자전거 100Km, 수영 100Km, 달리기 100km를 달성한다.</div>
+  <div id="java">매일매일 12시간씩 자바스크립트를 공부한다.</div>
+</body>
+
+</html>
