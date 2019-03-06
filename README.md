@@ -12,3 +12,5 @@ This is my Atom practice repository!
 ### 19.02.27~28 : 자바스크립트 언어
 ### 19.03.04 : 자바스크립트 코어 객체와 배열
 ### 19.03.05 : HTML DOM과 Document
+### 19.03.06 : 이벤트기초 및 활용
+
