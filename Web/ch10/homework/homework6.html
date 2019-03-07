@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>setInterval 이용하기</title>
+  <style>
+    #divWatch {
+      display: inline-block;
+      width: 7em;
+      background-color: lightskyblue;
+      border: 1px solid;
+    }
+  </style>
+
+</head>
+<body>
+  <h3>div 태그에 시계 만들기</h3>
+  시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작한다.
+  <hr>
+  <div id="divWatch" onclick = "stopTime()"></div>
+  <script>
+    var start = true;
+    var showWatch = document.getElementById("divWatch");
+    var current = new Date();
+    showWatch.innerHTML = current.toLocaleTimeString();
+    var goWatch = setInterval("goTime(showWatch)",1000);
+
+
+    function goTime(){
+      current = new Date();
+      showWatch.innerHTML = current.toLocaleTimeString();
+    }
+
+    function stopTime(){
+      if (start){
+        showWatch.style.color = "lightgray";
+        clearInterval(goWatch);
+        start = false;
+      }
+      else{
+        showWatch.style.color = "black";
+        current = new Date();
+        showWatch.innerHTML = current.toLocaleTimeString();
+        goWatch = setInterval("goTime(showWatch)",1000);
+        start = true;
+      }
+    }
+  </script>
+</body>
+</html>

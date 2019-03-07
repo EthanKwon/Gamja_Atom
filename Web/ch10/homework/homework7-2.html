@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>산수 문제를 풀어봅시다.</title>
+  <style>
+    .question {width: 70px;}
+    .text {width: 80px;}
+    td { width: 40px;}
+  </style>
+  <script>
+    var question = document.getElementsByClassName("question");
+    var answer = document.getElementsByClassName("text");
+    var manu = ["+","-","*","/"];
+
+    function init(){
+      for(var i=0;i<question.length;i++){
+        var rNum1 = Math.floor(Math.random()*20)+1;
+        var rNum2 = Math.floor(Math.random()*20)+1;
+        var rMan = manu[Math.floor(Math.random()*4)];
+
+        question[i].innerHTML = rNum1 + rMan + rNum2;
+      }
+    }
+
+    function check(){
+      var count = document.getElementById("count");
+      count.value = 0;
+
+      for(var i=0;i<question.length;i++){
+          if(eval(question[i].innerHTML) == parseInt(answer[i].value)){
+            count.value ++;
+            question[i].style.textDecoration="none";
+          }
+          else
+            question[i].style.textDecoration="line-through";
+      }
+      count.innerHTML = count.value;
+    }
+
+    function reset(){
+      var count = document.getElementById("count");
+      count.value = 0;
+      for(var i=0;i<question.length;i++){
+        var rNum1 = Math.floor(Math.random()*20)+1;
+        var rNum2 = Math.floor(Math.random()*20)+1;
+        var rMan = manu[Math.floor(Math.random()*4)];
+
+        question[i].innerHTML = rNum1 + rMan + rNum2;
+        question[i].style.textDecoration="none";
+        answer[i].value="";
+      }
+      count.innerHTML = count.value;
+    }
+  </script>
+
+</head>
+<body onload="init()">
+   <h3>산수 문제를 풀어봅시다.</h3>
+   자동으로 문제가 만들어집니다. 답 입력 후 채점 버튼을 누르세요. 다시 버튼을 누르면 새로운 문제가 출력됩니다.
+   <hr>
+   <table>
+     <tbody>
+       <tr>
+         <td class="question"></td>
+         <td colspan ="2"><input class="text" type="text"></td>
+       </tr>
+       <tr>
+         <td class="question"></td>
+         <td colspan ="2"><input class="text" type="text"></td>
+       </tr>
+       <tr>
+         <td class="question"></td>
+         <td colspan ="2"><input class="text" type="text" ></td>
+       </tr>
+       <tr>
+         <td class="question"></td>
+         <td colspan ="2"><input class="text" type="text"></td>
+       </tr>
+       <tr>
+         <td><input type="button" id="conFirm" value ="채점" onclick="check()"></td>
+         <td id=count>0</td>
+         <td><input type="button" value ="다시" onclick="reset()"></td>
+       </tr>
+     </tbody>
+   </table>
+</body>
+</html>

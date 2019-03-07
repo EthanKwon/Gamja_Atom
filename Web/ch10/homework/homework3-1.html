@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>사이트 접속</title>
+  <script>
+    function change(site) {
+      var win = window.open(site,"_blank","width=500, height=300");
+
+    }
+  </script>
+</head>
+<body>
+  <h3>옵션 선택으로 사이트 접속</h3>
+  옵션 선택 마다 새 윈도우에 접속합니다.
+  <hr>
+  접속할 사이트
+  <select id="sel" onchange = "change(options[selectedIndex].value)">
+    <option value="http://www.naver.com" id="naver" selected>네이버</option>
+    <option value="http://www.google.com" id="google">구글</option>
+    <option value="http://www.oracle.com" id="oracle">오라클</option>
+  </select>
+</body>
+</html>

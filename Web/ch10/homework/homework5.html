@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>setTime 이용하기</title>
+  <style>
+    #divWatch {
+      display: inline-block;
+      width: 7em;
+      background-color: lightskyblue;
+      border: 1px solid;
+    }
+  </style>
+  <script>
+    function init(){
+      var showWatch = document.getElementById("divWatch");
+      timeWatch(showWatch);
+    }
+
+    function timeWatch(obj) {
+      var current = new Date();
+      obj.innerHTML = current.toLocaleTimeString();
+      setTimeout("timeWatch(divWatch)", 1000);
+    }
+
+  </script>
+
+</head>
+<body onload = "init()">
+  <h3>div 태그에 시계 만들기</h3>
+  <hr>
+  <div id="divWatch"></div>
+</body>
+</html>
