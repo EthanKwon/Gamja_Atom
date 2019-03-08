@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>산수 문제를 풀어봅시다.</title>
+  <style>
+    td {width: 70px;}
+    .text {width: 80px;}
+  </style>
+  <script>
+    var question = document.getElementsByClassName("question");
+    var answer = document.getElementsByClassName("text");
+    var i = 10;
+    var countDown = setTimeout("check()",10000);
+    var countDownTime = setInterval("upNum()",1000);
+
+    function upNum() {
+      i--;
+      document.getElementById("t").innerHTML = i;
+      if(i == 0){
+        i=10;
+        clearInterval(countDownTime);
+        clearTimeout(countDown);
+      }
+    }
+    function check(){
+      var count = document.getElementById("count");
+      count.value =0;
+
+      for(var i=0;i<question.length;i++){
+          if(eval(question[i].innerHTML) == parseInt(answer[i].value)){
+            count.value ++;
+            question[i].style.textDecoration="none";
+          }
+          else
+            question[i].style.textDecoration="line-through";
+      }
+      count.innerHTML = count.value;
+    }
+    function reset(){
+      countDown = setTimeout("check()",10000);
+      countDownTime = setInterval("upNum()",1000);
+      document.getElementById("t").innerHTML = 10;
+      var count = document.getElementById("count");
+      count.value = 0;
+      for(var i=0;i<question.length;i++){
+        question[i].style.textDecoration="none";
+        answer[i].value="";
+      }
+      count.innerHTML = count.value;
+    }
+  </script>
+
+</head>
+<body >
+   <h3>산수 문제를 풀어봅시다.</h3>
+   문제는 자동으로 생성되며, 10초가 지나면 자동 채점됩니다. <br>
+   남은 시간 <span id="t">10</span>
+   <hr>
+   <table>
+     <tbody>
+       <tr>
+         <td class="question">12+15</td>
+         <td><input class="text" type="text"></td>
+       </tr>
+       <tr>
+         <td class="question">15+16</td>
+         <td><input class="text" type="text"></td>
+       </tr>
+       <tr>
+         <td class="question">3+13</td>
+         <td><input class="text" type="text"></td>
+       </tr>
+       <tr>
+         <td class="question">6+18</td>
+         <td><input class="text" type="text"></td>
+       </tr>
+       <tr>
+         <td><input type="button" id="conFirm" value ="다시" onclick="reset()"></td>
+         <td id=count>0</td>
+       </tr>
+     </tbody>
+   </table>
+</body>
+</html>

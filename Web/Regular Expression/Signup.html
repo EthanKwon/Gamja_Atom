@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>회원가입</title>
+  <style>
+    caption{
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      height: 2em;
+    }
+    table {
+      border: 3px solid black;
+      width: 350px;
+      height: 300px;
+    }
+
+    td { vertical-align: top;}
+
+    td.inputName {
+      font-weight: bold;
+      text-align: right;
+    }
+    td.inputForm {
+      text-align: center;
+    }
+    #checkForm,#check {
+      text-align: center;
+      font-weight: bold;
+    }
+    #error {
+      font-style: italic;
+      visibility: hidden;
+      color: red;
+      text-align: center;
+    }
+    #checkPass {
+      height: 1em;
+    }
+
+    }
+  </style>
+  <script>
+    function checkForm() {
+      var inputID = document.getElementById("ID");
+      var inputPass = document.getElementById("passWord");
+      var inputPassOk = document.getElementById("passWordOk");
+      var inputEmail = document.getElementById("eMail");
+      var inputPhone = document.getElementById("phoneNum");
+      var text ="";
+      var check1 = false;
+      var check2 = true;
+
+      var idReg =/^[a-z]+[a-z0-9]{5,19}$/;
+      if(!idReg.test(inputID.value))
+        text += "아이디는 영문자로 시작하는 6~20자 영문자 또는 숫자이어야 합니다.\n\n";
+
+
+      var passReg = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,20}$/;
+      if(!passReg.test(inputPass.value))
+        text += "비밀번호는 6~20 의 영문 대소문자로 입력하여야 하며, 최소 1개의 숫자 혹은 특수문자가 포함되어야 합니다.\n\n"
+
+      var passReg = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,20}$/;
+      if(!passReg.test(inputPassOk.value))
+        text += "비밀번호는 6~20 의 영문 대소문자로 입력하여야 하며, 최소 1개의 숫자 혹은 특수문자가 포함되어야 합니다.\n\n";
+
+      var eMailReg = /^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/;
+      if(!eMailReg.test(inputEmail.value))
+        text += "이메일의 형식이 아닙니다. 다시 입력해 주세요. \n\n";
+
+      var phoneReg = /(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/;
+      if(!phoneReg.test(inputPhone.value))
+        text += "전화번호의 형식이 아닙니다. 다시 입력해 주세요.\n";
+
+      if(inputPass.value != inputPassOk.value){
+        document.getElementById("error").style.visibility = "visible";
+        check2 =false;
+      }
+
+      if(text == ""){
+        text = "회원 가입이 가능합니다.";
+        check1 = true;
+      }
+
+      if(!check1 || check2)
+        alert(text);
+
+      /*
+      for(var i=0;i<inputForm.length;i++){
+        switch (inputForm[i].id){
+          case "ID" :
+            var idReg = /^[a-z]+[a-z0-9]{5,19}$/;
+            if(!idReg.test(inputForm[i].value))
+              text += "아이디는 영문자로 시작하는 6~20자 영문자 또는 숫자이어야 합니다.\n\n";
+            break;
+          case "passWord" :
+            var passReg = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,20}$/;
+            if(!passReg.test(inputForm[i].value))
+              text += "비밀번호는 6~20 의 영문 대소문자로 입력하여야 하며, 최소 1개의 숫자 혹은 특수문자가 포함되어야 합니다.\n\n"
+            break;
+          case "passWordOk" :
+            var passReg = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,20}$/;
+            if(!passReg.test(inputForm[i].value))
+              text += "비밀번호는 6~20 의 영문 대소문자로 입력하여야 하며, 최소 1개의 숫자 혹은 특수문자가 포함되어야 합니다.\n\n";
+            break;
+          case "eMail" :
+            var eMailReg = /^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/;
+            if(!eMailReg.test(inputForm[i].value))
+              text += "이메일의 형식이 아닙니다. 다시 입력해 주세요. \n\n";
+            break;
+          case "phoneNum" :
+            var phoneReg = /(\d{3}).*(\d{3}).*(\d{4})/;
+            if(!phoneReg.test(inputForm[i].value))
+              text += "전화번호의 형식이 아닙니다. 다시 입력해 주세요.\n";
+            break;
+          default : break;
+        }
+      }
+      */
+    }
+  </script>
+</head>
+<body>
+  <table>
+    <caption>회원가입 신청서</caption>
+    <tbody>
+      <tr>
+        <td class=inputName>아이디 : </td>
+        <td class=inputForm ><input type="text" id="ID" value="koi4752"></td>
+      </tr>
+      <tr>
+        <td class=inputName>패스워드 : </td>
+        <td class=inputForm ><input type="password" id="passWord" value="password123!"></td>
+      </tr>
+      <tr id="checkPass">
+        <td class=inputName>패스워드 확인 : </td>
+        <td class=inputForm><input type="password" id="passWordOk" value="password123!"><br>
+          <span id="error">※비밀번호가 다릅니다.※</span></td>
+      </tr>
+
+      <tr>
+        <td class=inputName>e-Mail : </td>
+        <td class=inputForm ><input type="email" id="eMail" value="koi4752@naver.com"></td>
+      </tr>
+      <tr>
+        <td class=inputName>휴대폰 : </td>
+        <td class=inputForm ><input type="text" id="phoneNum" value="01078987898"></td>
+      </tr>
+      <tr>
+        <td id="checkForm" colspan ="2"><button id="check" onclick="checkForm()">유효성 체크</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
