@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery</title>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    jQuery(document).ready(function() {
+      console.log("#1# 문서준비 이벤트 핸들러가 동작했습니다.");
+      jQuery('div').click(function() {
+        console.log("#2# div 노드 개수 : " + $('div').length);
+        console.log("#3# h1 노드 개수 : " + $('h1').length);
+        console.log("#4# h1 텍스트 노드 내용 : " + $('h1').text());
+        console.log("#5# h1 속성노드 개수 : " + $('id').length);
+        jQuery(this).remove();
+        jQuery('#id2').text("jQuery 실행 결과 입니다.");
+        console.log("#6# div 노드 개수 : " + $('div').length);
+        console.log("#7# h1 노드 개수 : " + $('h1').length);
+        console.log("#8# h1 텍스트 노드 내용 : " + $('h1').text());
+        console.log("#9# h1 속성노드 개수 : " + $('id').length);
+      });
+    });
+  </script>
+  <style>
+    div {width: 300px; height: 50px; color: purple; background-color: silver;}
+  </style>
+</head>
+<body>
+  <div><h1 id="id1">jQuery를 클릭하세요</h1></div>
+  <h1 id="id2"></h1>
+</body>
+</html>

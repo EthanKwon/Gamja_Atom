@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Star</title>
+</head>
+<body>
+  <h3>별을 만드세요.</h3>
+  <hr>
+  <script>
+    var num =  parseInt(prompt("숫자를 입력해 주세요. 단, 양의 정수만 허용됩니다.","5"));
+
+    if (isNaN(num) || num < 0){
+      alert("입력 오류 힙니다.");
+    }
+
+    for (var i = 0 ; i < num ; i++){
+      var star = "";
+      for (var k=0 ; k<num ; k ++){
+        if (k < i+1)
+          star += "*";
+        else
+          star += "&nbsp;";
+      }
+      for (k=num ; k > 0 ; k --){
+        if (k < i+2)
+          star += "*";
+        else
+          star += "&nbsp;";
+      }
+
+      document.write(star + "<br>");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>제이쿼리 실행 코드</title>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    //$는 JQuery를 뜻한다.
+    $(document).ready(function(){
+      msg1();
+      $('#id1').click(function(){
+        msg2();
+      });
+    });
+    function msg1() {
+      alert('msg1():문서 로드후 자동으로 경고창을 표시합니다.');
+    }
+    function msg2() {
+      $('#id2').css('background','silver');
+
+      $('#id2').text('msg2():HTML 문서 변경 되었습니다.');
+    }
+  </script>
+
+</head>
+<body>
+  <button id="id1">선택하면 메시지를 변경합니다.</button><br><br>
+  <div id="id2">메시지 :</div>
+</body>
+</html>
