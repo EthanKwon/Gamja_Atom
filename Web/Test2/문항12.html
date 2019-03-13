@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Sport</title>
+  <style>
+    img {width: 300px; height: 300px;}
+    select {width: 150px; height: 1.5em; font-size: 1.3em;}
+  </style>
+  <script>
+    function changePicture() {
+      var choice = document.getElementById("choice");
+      var img = document.getElementById("ballImage");
+      var val = choice.value;
+
+      switch(val){
+        case "0" : img.src = "media/soccer.jpg"; break;
+        case "1" : img.src = "media/basketball.jpg"; break;
+        case "2" : img.src = "media/baseball.jpg"; break;
+        default : img.src = ""; break;
+      }
+    }
+  </script>
+
+</head>
+<body onload = "changePicture()">
+  <h3>스포츠 종목을 하나 선택해 주세요.</h3>
+  <hr>
+  <div>
+    <select id="choice" onchange="changePicture()">
+      <option value="0" selected>축구</option>
+      <option value="1" >농구</option>
+      <option value="2" >야구</option>
+    </select>
+    <br><br>
+    <img src="media/soccer.jpg" alt="" id="ballImage">
+  </div>
+</body>
+</html>
